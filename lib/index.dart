@@ -1,0 +1,40 @@
+// Export pages
+export '/pages/authotification/screen_authorization_0/screen_authorization0_widget.dart'
+    show ScreenAuthorization0Widget;
+export '/pages/authotification/splash_0/splash0_widget.dart' show Splash0Widget;
+export '/pages/authotification/screen_welcome_0/screen_welcome0_widget.dart'
+    show ScreenWelcome0Widget;
+export '/pages/screen_sign_in_0/screen_sign_in0_widget.dart'
+    show ScreenSignIn0Widget;
+export '/pages/authotification/screen_forgot_password_0/screen_forgot_password0_widget.dart'
+    show ScreenForgotPassword0Widget;
+export '/pages/authotification/screen_verification_0/screen_verification0_widget.dart'
+    show ScreenVerification0Widget;
+export '/pages/screen_9_home_0/screen9_home0_widget.dart'
+    show Screen9Home0Widget;
+export '/pages/authotification/screen_start2/screen_start2_widget.dart'
+    show ScreenStart2Widget;
+export '/pages/authotification/screen_8_look_good_0/screen8_look_good0_widget.dart'
+    show Screen8LookGood0Widget;
+export '/pages/authotification/screen_new_password_0/screen_new_password0_widget.dart'
+    show ScreenNewPassword0Widget;
+export '/pages/screen_10_details_0/screen10_details0_widget.dart'
+    show Screen10Details0Widget;
+export '/pages/screen_11_cart_0/screen11_cart0_widget.dart'
+    show Screen11Cart0Widget;
+export '/pages/screen_14_address_0/screen14_address0_widget.dart'
+    show Screen14Address0Widget;
+export '/pages/screen_15_payment_0/screen15_payment0_widget.dart'
+    show Screen15Payment0Widget;
+export '/pages/screen_16_add_new_card_0/screen16_add_new_card0_widget.dart'
+    show Screen16AddNewCard0Widget;
+export '/pages/screen_17_order_confirm_0/screen17_order_confirm0_widget.dart'
+    show Screen17OrderConfirm0Widget;
+export '/pages/screen_20_whishlist_0/screen20_whishlist0_widget.dart'
+    show Screen20Whishlist0Widget;
+export '/pages/screen_12_reviews_0/screen12_reviews0_widget.dart'
+    show Screen12Reviews0Widget;
+export '/pages/screen_13_add_reviews_0/screen13_add_reviews0_widget.dart'
+    show Screen13AddReviews0Widget;
+export '/pages/screen_18_person/screen18_person_widget.dart'
+    show Screen18PersonWidget;

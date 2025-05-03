@@ -1,0 +1,37 @@
+# Flutter/Dart/Pub
+.dart_tool/
+.packages
+.pub-cache/
+build/
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+
+# IntelliJ / Android Studio / VS Code
+.idea/
+.vscode/
+*.iml
+
+# FlutterFlow specific
+*.flutterflow/
+firebase_options.dart
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Generated files
+*.g.dart
+*.freezed.dart
+
+# Web (если экспортирован как веб)
+web/.dart_tool/
+web/build/
+
+# Secrets (если есть)
+.env
+.env.*
