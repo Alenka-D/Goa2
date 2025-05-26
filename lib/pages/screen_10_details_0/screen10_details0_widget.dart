@@ -1,3 +1,4 @@
+// Импорты остаются без изменений
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -13,7 +14,7 @@ export 'screen10_details0_model.dart';
 class Screen10Details0Widget extends StatefulWidget {
   const Screen10Details0Widget({
     super.key,
-    required this.addReff,
+    required this.addReff, // Ссылка на документ товара
   });
 
   final DocumentReference? addReff;
@@ -41,27 +42,31 @@ class _Screen10Details0WidgetState extends State<Screen10Details0Widget> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return StreamBuilder<NewAddRecord>(
-      stream: NewAddRecord.getDocument(widget!.addReff!),
-      builder: (context, snapshot) {
-        // Customize what your widget looks like when it's loading.
-        if (!snapshot.hasData) {
-          return Scaffold(
-            backgroundColor: FlutterFlowTheme.of(context).alternate,
-            body: Center(
-              child: SizedBox(
-                width: 50.0,
-                height: 50.0,
-                child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(
-                    FlutterFlowTheme.of(context).primary,
-                  ),
+Widget build(BuildContext context) {
+  // Используем StreamBuilder для получения данных из Firestore в реальном времени
+  return StreamBuilder<NewAddRecord>(
+    // Подключаемся к документу по переданной ссылке (addReff)
+    stream: NewAddRecord.getDocument(widget!.addReff!),
+    builder: (context, snapshot) {
+      // Пока данные ещё не загружены (в ожидании ответа от Firestore)
+      if (!snapshot.hasData) {
+        // Отображаем индикатор загрузки
+        return Scaffold(
+          backgroundColor: FlutterFlowTheme.of(context).alternate, // Цвет фона
+          body: Center(
+            child: SizedBox(
+              width: 50.0,
+              height: 50.0,
+              child: CircularProgressIndicator(
+                // Устанавливаем цвет анимации индикатора
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  FlutterFlowTheme.of(context).primary,
                 ),
               ),
             ),
-          );
-        }
+          ),
+        );
+      }
 
         final screen10Details0NewAddRecord = snapshot.data!;
 
@@ -317,25 +322,28 @@ class _Screen10Details0WidgetState extends State<Screen10Details0Widget> {
                           ],
                         ),
                       ),
+                      // Добавляем отступы вокруг горизонтального блока изображений
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            20.0, 20.0, 20.0, 0.0),
+                        padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                         child: SingleChildScrollView(
+                          // Включаем горизонтальную прокрутку
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
+                              // Первое изображение товара
                               ClipRRect(
-                                borderRadius: BorderRadius.circular(10.0),
+                                borderRadius: BorderRadius.circular(10.0), // Скругляем углы
                                 child: Image.asset(
-                                  'assets/images/Rectangle_575.png',
+                                  'assets/images/Rectangle_575.png', // Путь к изображению
                                   width: 77.0,
                                   height: 77.0,
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.cover, // Картинка заполняет весь контейнер
                                 ),
                               ),
+                              // Второе изображение
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(10.0),
                                 child: Image.asset(
@@ -345,6 +353,7 @@ class _Screen10Details0WidgetState extends State<Screen10Details0Widget> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
+                              // Третье изображение
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(10.0),
                                 child: Image.asset(
@@ -354,6 +363,7 @@ class _Screen10Details0WidgetState extends State<Screen10Details0Widget> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
+                              // Четвёртое изображение
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(10.0),
                                 child: Image.asset(
@@ -363,10 +373,13 @@ class _Screen10Details0WidgetState extends State<Screen10Details0Widget> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                            ].divide(SizedBox(width: 8.0)),
+                            ]
+                            // Добавляем горизонтальные отступы между изображениями
+                            .divide(SizedBox(width: 8.0)),
                           ),
                         ),
                       ),
+
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 26.0, 0.0, 0.0),
